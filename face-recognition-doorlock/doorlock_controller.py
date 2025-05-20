@@ -29,7 +29,7 @@ def main():
     while True:
         door_open_status = get_doorlock_status(firebase_url)
 
-        if door_open_status:  # True인 경우만
+        if door_open_status:
             print("Door is opened")
             set_color(0, 10, 0)
             door_open()
@@ -39,7 +39,7 @@ def main():
             set_color(10, 0, 0)
             print("Door is now locked again")
             update_doorlock_status(firebase_url, False)
-        else:  # False 또는 None → 무조건 닫기
+        else:
             door_close()
             set_color(10, 0, 0)
 
