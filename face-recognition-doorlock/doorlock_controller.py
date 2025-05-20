@@ -28,17 +28,20 @@ def main():
 
     while True:
         door_open_status = get_doorlock_status(firebase_url)
-        if door_open_status is not None:
-            if door_open_status:
-                print("Door is opened")
-                set_color(0, 10, 0)
-                door_open()
-                time.sleep(3)
 
-                door_close()
-                set_color(10, 0, 0)
-                print("Door is now locked again")
-                update_doorlock_status(firebase_url, False)
+        if door_open_status:  # True인 경우만
+            print("Door is opened")
+            set_color(0, 10, 0)
+            door_open()
+            time.sleep(3)
+
+            door_close()
+            set_color(10, 0, 0)
+            print("Door is now locked again")
+            update_doorlock_status(firebase_url, False)
+        else:  # False 또는 None → 무조건 닫기
+            door_close()
+            set_color(10, 0, 0)
 
         time.sleep(1)
 
