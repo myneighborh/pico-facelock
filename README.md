@@ -1,5 +1,5 @@
 # Face recognition-based doorlock system
-
+A smart doorlock system that automatically opens or closes based on facial recognition of authorized or unauthorized users.
 ![image](https://github.com/user-attachments/assets/97931e9e-a806-4499-beb7-69b411138f78)
 
 <div align="center">
