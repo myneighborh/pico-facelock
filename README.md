@@ -18,3 +18,5 @@ A smart doorlock system that automatically opens or closes based on facial recog
     </tr>
   </table>
 </div>
+
+![선반](https://github.com/user-attachments/assets/251b9660-1463-4024-9231-4023bf762100)
